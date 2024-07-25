@@ -11,8 +11,8 @@
     "@types/node": "^20.14.12",
     "@types/yargs": "^17.0.32",
     "ali-oss": "^6.20.0",
+    "axios": "^1.7.2",
     "dotenv": "^16.4.5",
-    "mvc-common-toolkit": "^1.28.1",
     "yargs": "^17.7.2"
   },
   "devDependencies": {

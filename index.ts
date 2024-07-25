@@ -9,12 +9,12 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const config: AlibabaCloudGatewayConfig = {
-  accessKey: process.env.OSS_ACCESS_KEY || '',
-  secret: process.env.OSS_SECRET || '',
+  accessKey: process.env.OSS_ACCESS_KEY || "",
+  secret: process.env.OSS_SECRET || "",
   endpoint: "https://sts.aliyuncs.com",
   oss: {
-    bucketName: process.env.OSS_BUCKET_NAME || '',
-    region: process.env.OSS_REGION || '',
+    bucketName: process.env.OSS_BUCKET_NAME || "",
+    region: process.env.OSS_REGION || "",
   },
   sts: {
     roleArn: "",
