@@ -25,15 +25,17 @@ const alibabaCloudGateway = new AlibabaCloudGateway(config);
 
 async function uploadFile(fileName: string) {
   try {
-    const filePath = path.resolve(__dirname, fileName);
+    const filePath = path.isAbsolute(fileName) ? fileName : path.resolve(__dirname, fileName);
     const fileData = readFileSync(filePath);
 
     const uploadedUrl = await alibabaCloudGateway.uploadLocalToBucket(
-      fileName,
+      path.basename(filePath),
       fileData
     );
+
     console.log("File uploaded successfully:", uploadedUrl);
   } catch (error) {
+    
     console.error("Error uploading file:", error);
   }
 }
